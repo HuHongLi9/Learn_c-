@@ -15,5 +15,51 @@ return0;
 
 
 
-## 1.重载加法运算符
+## 1.成员函数重载加法运算符
 
+- 代码写在类中。
+
+
+```
+ // 1.成员函数重载+号
+
+
+ //Persion  为返回值类型
+ Persion operator+(Persion  &p)    
+ {
+
+ Persion tmp;
+ tmp.m_a = this->m_a + p.m_a;
+ tmp.m_b = this->m_b + p.m_b;
+
+ return (tmp);
+
+ }
+```
+
+
+## 2.全局函数重载加法运算符
+
+- 代码写在调用前面。
+- 传入两个对象。
+
+```
+// 2.全局函数重载+号
+
+Persion operator+(Persion &p1,Persion &p2)
+{
+
+    Persion temp;
+    temp.m_a = p1.m_a + p2.m_a;
+    temp.m_b = p1.m_b + p2.m_b;
+
+return(temp); 
+
+}
+```
+
+> 注意应用场景，及应用方式。
+
+> 返回值类型。
+
+> operator+ （算子+） 函数。
