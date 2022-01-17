@@ -98,4 +98,4 @@ return(temp);
 
 > 返回值类型。
 
-> operator+ （算子+） 函数。
+> operator+ （算子+） 函数
